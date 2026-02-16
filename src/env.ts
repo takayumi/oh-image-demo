@@ -14,6 +14,7 @@ export const env = createEnv({
 
 	client: {
 		VITE_APP_TITLE: z.string().min(1).optional(),
+		VITE_BASE_URL: z.url().default("http://localhost:3000"),
 		VITE_IMGPROXY_URL: z.url(),
 	},
 

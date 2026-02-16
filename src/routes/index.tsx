@@ -5,6 +5,8 @@ import { env } from "@/env";
 export const Route = createFileRoute("/")({ component: App });
 
 function App() {
+	const imgSrc = `${env.VITE_BASE_URL}/img/sean.png`;
+
 	const loaderNoDot = useImgproxyLoader({
 		path: env.VITE_IMGPROXY_URL,
 		placeholder: true,
@@ -45,7 +47,7 @@ function App() {
 			<div className="p-4">
 				<OhImage
 					loader={loaderNoDot}
-					src="/img/sean.png"
+					src={imgSrc}
 					alt="No Dot"
 					width={64}
 					height={64}
@@ -59,7 +61,7 @@ function App() {
 			<div className="p-4">
 				<OhImage
 					loader={loaderWithDot}
-					src="/img/sean.png"
+					src={imgSrc}
 					alt="With Dot"
 					width={64}
 					height={64}
@@ -73,7 +75,7 @@ function App() {
 			<div className="p-4">
 				<OhImage
 					loader={loaderFNoDot}
-					src="/img/sean.png"
+					src={imgSrc}
 					alt="With Dot"
 					width={64}
 					height={64}
@@ -87,7 +89,7 @@ function App() {
 			<div className="p-4">
 				<OhImage
 					loader={loaderFWithDot}
-					src="/img/sean.png"
+					src={imgSrc}
 					alt="With Dot"
 					width={64}
 					height={64}
