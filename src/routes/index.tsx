@@ -49,8 +49,8 @@ function App() {
 					loader={loaderNoDot}
 					src={imgSrc}
 					alt="No Dot"
-					width={64}
-					height={64}
+					width={256}
+					height={256}
 					className="w-16 h-16"
 				/>
 				<p className="text-white">
@@ -63,8 +63,8 @@ function App() {
 					loader={loaderWithDot}
 					src={imgSrc}
 					alt="With Dot"
-					width={64}
-					height={64}
+					width={256}
+					height={256}
 					className="w-16 h-16"
 				/>
 				<p className="text-white">
@@ -77,12 +77,12 @@ function App() {
 					loader={loaderFNoDot}
 					src={imgSrc}
 					alt="With Dot"
-					width={64}
-					height={64}
+					width={256}
+					height={256}
 					className="w-16 h-16"
 				/>
 				<p className="text-white">
-					With <code>f:webp</code>
+					With <code>params.f:webp</code>
 				</p>
 			</div>
 
@@ -91,12 +91,12 @@ function App() {
 					loader={loaderFWithDot}
 					src={imgSrc}
 					alt="With Dot"
-					width={64}
-					height={64}
+					width={256}
+					height={256}
 					className="w-16 h-16"
 				/>
 				<p className="text-white">
-					With <code>f:.webp</code>
+					With <code>params.f:.webp</code>
 				</p>
 			</div>
 		</div>
