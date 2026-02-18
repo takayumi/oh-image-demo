@@ -34,11 +34,20 @@ function App() {
 	const loaderWithWatermark = useImgproxyLoader({
 		path: env.VITE_IMGPROXY_URL,
 		transforms: {
-			format: ".webp",
+			format: "webp",
 			quality: 80,
 			watermark: {
 				opacity: 10,
 			},
+		},
+	});
+
+	const loaderWithBlur = useImgproxyLoader({
+		path: env.VITE_IMGPROXY_URL,
+		transforms: {
+			format: "webp",
+			quality: 80,
+			blur: 20,
 		},
 	});
 
@@ -86,6 +95,21 @@ function App() {
 				/>
 				<p className="text-white">
 					With <code>watermark_text only</code>
+				</p>
+			</div>
+
+			<div className="p-4">
+				<OhImage
+					placeholder={placeholderLoader}
+					loader={loaderWithBlur}
+					src={imgSrc}
+					alt="With Blur"
+					width={256}
+					height={256}
+					className="w-16 h-16"
+				/>
+				<p className="text-white">
+					With <code>blur</code>
 				</p>
 			</div>
 		</div>
