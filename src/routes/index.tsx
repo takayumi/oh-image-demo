@@ -31,6 +31,17 @@ function App() {
 		},
 	});
 
+	const loaderWithWatermark = useImgproxyLoader({
+		path: env.VITE_IMGPROXY_URL,
+		transforms: {
+			format: ".webp",
+			quality: 80,
+			watermark: {
+				opacity: 10,
+			},
+		},
+	});
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
 			<div className="p-4">
@@ -60,6 +71,21 @@ function App() {
 				/>
 				<p className="text-white">
 					With <code>format:.webp</code>
+				</p>
+			</div>
+
+			<div className="p-4">
+				<OhImage
+					placeholder={placeholderLoader}
+					loader={loaderWithWatermark}
+					src={imgSrc}
+					alt="With Watermark"
+					width={256}
+					height={256}
+					className="w-16 h-16"
+				/>
+				<p className="text-white">
+					With <code>watermark_text only</code>
 				</p>
 			</div>
 		</div>
