@@ -108,7 +108,8 @@ function App() {
 					className="w-16 h-16"
 				/>
 				<p className="text-white">
-					With <code>watermark_text only</code>
+					With{" "}
+					<code>watermark.opacity + defined IMGPROXY_WATERMARK_DATA only</code>
 				</p>
 			</div>
 
