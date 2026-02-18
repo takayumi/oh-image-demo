@@ -71,6 +71,20 @@ function App() {
 			<div className="p-4">
 				<OhImage
 					placeholder={placeholderLoader}
+					src={imgSrc}
+					alt="Placeholder Only"
+					width={256}
+					height={256}
+					className="w-16 h-16"
+				/>
+				<p className="text-white">
+					With <code>placeholder only</code>
+				</p>
+			</div>
+
+			<div className="p-4">
+				<OhImage
+					placeholder={placeholderLoader}
 					loader={loaderWithDot}
 					src={imgSrc}
 					alt="With Dot"
