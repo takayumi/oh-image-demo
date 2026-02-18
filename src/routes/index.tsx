@@ -37,7 +37,7 @@ function App() {
 			format: "webp",
 			quality: 80,
 			watermark: {
-				opacity: 10,
+				opacity: 0.2,
 			},
 		},
 	});
